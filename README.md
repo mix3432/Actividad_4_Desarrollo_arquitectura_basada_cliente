@@ -36,6 +36,12 @@ El uso de SQLAlchemy como ORM simplifica la interacción con la base de datos, m
 
 Este ejercicio no solo ofrece una comprensión práctica de cómo desarrollar aplicaciones de este tipo, sino que también sienta las bases para proyectos más complejos en el futuro.
 
+## Capturas de Pantalla
+
+### Ventana Principal
+
+![Ventana Principal](/docs/img/front.png)
+
 
 ## Integrantes
 
