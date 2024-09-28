@@ -1,4 +1,0 @@
-# Este archivo contiene las dependencias necesarias para ejecutar el proyecto.
-Flask==2.3.2          # Flask es el framework web utilizado para manejar la lógica del servidor.
-Flask-SQLAlchemy==3.0.3  # Flask-SQLAlchemy es una extensión que permite manejar la base de datos con SQLAlchemy en Flask.
-tk==0.1.0             # Tkinter es una biblioteca utilizada para crear la interfaz gráfica de usuario.
