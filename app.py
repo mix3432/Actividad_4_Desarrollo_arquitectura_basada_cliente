@@ -24,10 +24,49 @@ def validate_time_format(time):
 
     :param time: Cadena de texto con la hora a validar.
     """
-    return re.match(r'^\d{2}:\d{2}$', time) is not None
+    if not re.match(r'^(?:[01]\d|2[0-3]):([0-5]\d)$', time):
+        messagebox.showerror("Error de Formato",
+                             "Por favor ingrese la hora en el formato HH:MM.")
+        return False
+    return True
 
+
+def validate_fields():
+    """
+    Valida si los campos de entrada están completos.
+    """
+    if not user_name_entry.get():
+        messagebox.showerror("Campo nombre vacío",
+                             "Por favor ingrese su nombre.")
+        return False
+    if not court_name_entry.get():
+        messagebox.showerror("Campo cancha vacío",
+                             "Por favor ingrese el nombre de la cancha.")
+        return False
+    if not date_entry.get():
+        messagebox.showerror("Campo fecha vacío",
+                             "Por favor ingrese la fecha de la reserva.")
+        return False
+    if not time_entry.get():
+        messagebox.showerror("Campo hora vacío",
+                             "Por favor ingrese la hora de la reserva.")
+        return False
+    return True
+
+
+def clean_fields():
+    """
+    Limpia los campos de entrada.
+    """
+    user_name_entry.delete(0, tk.END)
+    court_name_entry.delete(0, tk.END)
+    date_entry.delete(0, tk.END)
+    time_entry.delete(0, tk.END)
+    minute_entry.delete(0, tk.END)
 
 # Función para crear una nueva reserva en la base de datos
+
+
 def create_reservation(user_name, court_name, date, time):
     """
     Crea una nueva reserva en la base de datos.
@@ -37,9 +76,10 @@ def create_reservation(user_name, court_name, date, time):
     :param date: Fecha de la reserva en formato YYYY-MM-DD.
     :param time: Hora de la reserva en formato HH:MM.
     """
+    if not validate_fields():
+        return
+
     if not validate_time_format(time):
-        messagebox.showerror("Error de Formato",
-                             "Por favor ingrese la hora en el formato HH:MM.")
         return
 
     with app.app_context():
@@ -52,6 +92,7 @@ def create_reservation(user_name, court_name, date, time):
         db.session.add(new_reservation)
         db.session.commit()
         messagebox.showinfo("Éxito", "¡Reserva creada con éxito!")
+        clean_fields()
 
 
 # Función para cargar y mostrar las reservas existentes

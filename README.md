@@ -1,4 +1,18 @@
-# Proyecto de Arquitectura Basada en Cliente
+# Actividad 4 - Utilizando sistemas de control de versiones
+
+## Descripción
+
+Este repositorio contiene el código fuente de un proyecto de arquitectura basada en cliente desarrollado en Python. El proyecto utiliza Flask como backend y tkinter como frontend para crear una aplicación de gestión de datos.
+
+## Integrantes
+
+- [Juan Diaz - 100160393](https://github.com/juandiazmoya)
+- [Michel Vega - 10061117](https://github.com/mix3432)
+- [Jhon Sánchez - 100122743](https://github.com/Alexsanchez-WP)
+
+---
+
+## Proyecto de Arquitectura Basada en Cliente
 
 Este proyecto demuestra la efectividad de una arquitectura basada en cliente para aplicaciones de gestión de datos. Al utilizar Flask como backend y tkinter como frontend, se ha logrado crear una aplicación robusta, fácil de usar y escalable.
 
@@ -12,18 +26,25 @@ Este proyecto demuestra la efectividad de una arquitectura basada en cliente par
 ## Ejecución del Proyecto
 
 1. Clona el repositorio:
+
     ```bash
     git clone https://github.com/mix3432/Actividad_4_Desarrollo_arquitectura_basada_cliente.git
     ```
+
 2. Navega al directorio del proyecto:
+
     ```bash
     cd Actividad_4_Desarrollo_arquitectura_basada_cliente
     ```
+
 3. Instala las dependencias:
+
     ```bash
     pip install -r requirements.txt
     ```
+
 4. Ejecuta el servicio:
+
     ```bash
     python app.py
     ```
@@ -41,10 +62,3 @@ Este ejercicio no solo ofrece una comprensión práctica de cómo desarrollar ap
 ### Ventana Principal
 
 ![Ventana Principal](/docs/img/front.png)
-
-
-## Integrantes
-
-- [Juan Diaz - 100160393](https://github.com/juandiazmoya)
-- [Michel Vega - 10061117](https://github.com/mix3432)
-- [Jhon Sánchez - 100122743](https://github.com/Alexsanchez-WP)
